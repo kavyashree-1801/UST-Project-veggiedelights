@@ -13,7 +13,10 @@ html, body {
 /* ===================== BODY ===================== */
 body {
   background-color: #f5f5f5;
-  padding-bottom: 80px; /* Space for footer */
+  padding-bottom: 100px; /* space for footer */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* ===================== NAVBAR ===================== */
@@ -115,6 +118,7 @@ h1 {
   gap: 20px;
   justify-content: center;
   padding: 20px;
+  flex: 1; /* allow body flex layout */
 }
 
 /* ===================== RECIPE CARD ===================== */
@@ -127,6 +131,8 @@ h1 {
   display: flex;
   flex-direction: column;
   transition: transform 0.3s;
+  cursor: pointer;
+  position: relative;
 }
 
 .recipe-card:hover {
@@ -151,46 +157,61 @@ h1 {
   color: #555;
 }
 
-/* ===================== BUTTONS ===================== */
-.recipe-card button {
-  margin: 10px;
-  padding: 8px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.view-btn {
-  background: #007bff;
-  color: #fff;
-}
-
-.view-btn:hover {
-  background: #0056b3;
-}
-
+/* ===================== DELETE BUTTON ===================== */
 .delete-btn {
-  background: #dc3545;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  background-color: #dc3545;
   color: #fff;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .delete-btn:hover {
-  background: #c82333;
+  background-color: #c82333;
+}
+
+/* ===================== EXPANDED CONTENT ===================== */
+.expanded-content {
+  margin: 10px;
+  display: none;
+  overflow: hidden;
+}
+
+.recipe-card.expanded .expanded-content {
+  display: block;
+}
+
+/* ===================== BULLETLESS LIST ===================== */
+ul.no-bullets {
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+ul.no-bullets li {
+  margin-bottom: 5px;
+  font-size: 0.95rem;
+  color: #555;
 }
 
 /* ===================== FOOTER ===================== */
 .footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
   background: #ff7b00;
   text-align: center;
   color: #fff;
   padding: 15px 10px;
   font-weight: bold;
   letter-spacing: 0.5px;
+  margin-top: auto; /* push footer to bottom if content is short */
+  flex-shrink: 0;
 }
 
 /* ===================== RESPONSIVE ===================== */
