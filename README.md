@@ -4,7 +4,7 @@ A recipe book web application that allows users to browse, search, add, edit, an
 ## 📸 Demo / Live Link  
 🔗 **Live Preview:**https://github.com/user-attachments/assets/a283bb1e-dad0-4d0d-b1f3-d0d50cdab76a  
 
-📂 **Repository Link:**https://github.com/kavyashree-1801/UST-Project-veggiedelights.git
+📂 **Repository Link:**
 
  ## Features
 User signup & login with sessions
@@ -24,9 +24,8 @@ Image upload support
 | PHP                 | Backend logic, session handling, CRUD operations |
 | MySQL               | Database for storing users & recipes             |
 | HTML / CSS          | Frontend structure & styling                     |
-| JavaScript          | Form validation & UI interactions                |
+| JavaScript(vanilla) | Form validation & UI interactions                |
 | PHP Sessions        | User authentication & role management            |
-| File Uploads (PHP)  | Storing recipe images                            |
 
 
 ## Installation
@@ -48,16 +47,34 @@ http://localhost/veggiedelights
 
 ## 📁 Folder Structure
 veggiedelights/
- ┣ css/
- ┣ images/
- ┣ uploads/
- ┣ admin/
- ┣ user/
- ┣ config.php
- ┣ index.php
- ┣ login.php
- ┣ signup.php
- ┗ about.php
+│
+├── css/                     # All CSS files
+├── js/                      # JavaScript files
+├── api/                     # Backend API handlers (AJAX)
+│
+├── index.php                # Home page
+├── login.php                # User login
+├── signup.php               # User signup
+├── logout.php               # Logout (user/admin)
+│
+├── userprofile.php          # User profile management
+├── my_recipes.php           # User's own recipes
+├── favorite_recipes.php     # Favorite recipes
+├── contact.php              # Contact form
+├── feedback.php             # Feedback form
+├── search_recipe.php        #search recipes
+├── add_recipes.php          # users recipe form
+├── about.php                #about the website
+│
+├── manage_users.php         # Admin: Manage users
+├── manage_recipes.php       # Admin: Manage all recipes
+├── manage_categories.php    # Admin: Manage recipe categories
+├── manage_contact.php       # Admin: View contact messages
+├── manage_feedback.php      # Admin: View feedback
+│
+├── config.php               # Database configuration
+└── README.md                # Project documentation
+
 
 ## 🧠 Future Improvements
 Password reset via email
