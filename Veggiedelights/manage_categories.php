@@ -155,22 +155,6 @@ $categories = mysqli_query($con, "SELECT * FROM categories ORDER BY id DESC");
       font-size: 1.2rem;
     }
 
-    .category-card .btn {
-      display: inline-block;
-      margin-bottom: 15px;
-      padding: 8px 15px;
-      background: #ff7b00;
-      color: #fff;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .category-card .btn:hover {
-      opacity: 0.8;
-    }
-
     /* Add Category button */
     .add-category {
       display: inline-block;
@@ -253,7 +237,6 @@ $categories = mysqli_query($con, "SELECT * FROM categories ORDER BY id DESC");
     <div class="category-card">
       <img src="<?php echo $cat['image'] ? htmlspecialchars($cat['image']) : 'uploads/default.jpg'; ?>" alt="<?php echo htmlspecialchars($cat['name']); ?>">
       <h2><?php echo htmlspecialchars($cat['name']); ?></h2>
-      <a href="italian.php" class="btn">View Recipes</a>
     </div>
   <?php endwhile; ?>
 </section>
