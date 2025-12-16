@@ -4,7 +4,7 @@ A recipe book web application that allows users to browse, search, add, edit, an
 ## 📸 Demo / Live Link  
 🔗 **Live Preview:**  
 
-📂 **Repository Link:**https://github.com/kavyashree-1801/UST-Project-veggiedelights.git
+📂 **Repository Link:**
 
  ## Features
 User signup & login with sessions
