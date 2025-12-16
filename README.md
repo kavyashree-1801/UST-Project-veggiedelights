@@ -2,7 +2,7 @@
 A recipe book web application that allows users to browse, search, add, edit, and manage vegetarian recipes with secure login, role-based access, and a clean responsive interface. Built using PHP, MySQL, HTML/CSS, and vanilla JavaScript.
 
 ## 📸 Demo / Live Link  
-🔗 **Live Preview:**  
+🔗 **Live Preview:**https://github.com/user-attachments/assets/d1b49f28-8d9f-4966-a154-94c1cff72bf7  
 
 📂 **Repository Link:**https://github.com/kavyashree-1801/UST-Project-veggiedelights.git
 
