@@ -1,0 +1,63 @@
+body { margin:0; font-family:Poppins, sans-serif; background:#f8f8f8; }
+
+/* ✅ NAVBAR */
+.navbar {
+  display:flex; justify-content:space-between; align-items:center;
+  background:#ff7b00; padding:12px 30px; flex-wrap:wrap;
+}
+.logo a { font-size:1.6rem; font-weight:bold; color:#fff; text-decoration:none; }
+.navbar nav { display:flex; gap:20px; flex-wrap:wrap; }
+.navbar nav a {
+  color:#fff; text-decoration:none; font-weight:bold;
+  padding:6px 10px; border-radius:5px; transition:0.3s;
+}
+.navbar nav a:hover,
+.navbar nav a.active {
+  background:#fff; color:#ff7b00;
+}
+
+.auth-links { display:flex; align-items:center; gap:12px; }
+.welcome { color:#fff; font-weight:bold; }
+
+.profile-icon {
+  display:flex; align-items:center; justify-content:center;
+  width:38px; height:38px; background:#fff;
+  color:#ff8c00; border-radius:50%;
+  font-size:20px; font-weight:bold; text-decoration:none;
+  transition:0.3s;
+}
+.profile-icon:hover { background:#ff8c00; color:#fff; }
+
+.nav-link-logout {
+  background:#fff; color:#ff8c00; padding:6px 12px;
+  border-radius:5px; text-decoration:none; font-weight:bold;
+}
+.nav-link-logout:hover { background:#ff7b00; color:#fff; }
+
+/* ✅ ABOUT CONTENT */
+.about { max-width:1100px; margin:60px auto; padding:20px; text-align:center; line-height:1.8; }
+.about h1 { font-size:2.6em; color:#2c3e50; margin-bottom:30px; }
+.brand { color:#ff7b00; }
+
+.about-content { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:30px; }
+.about-text { flex:1; text-align:left; font-size:1.1em; }
+.about-image img {
+  width:100%; max-width:400px; border-radius:15px;
+  box-shadow:0 4px 15px rgba(0,0,0,0.1);
+  transition:0.3s;
+}
+.about-image img:hover { transform:scale(1.05); }
+
+/* ✅ VALUES */
+.value-cards { display:flex; flex-wrap:wrap; justify-content:center; gap:25px; }
+.value-card {
+  background:#fff8f2; border:1px solid #ffe0c0; border-radius:15px;
+  padding:25px; width:280px; transition:0.3s;
+}
+.value-card:hover { transform:translateY(-5px); }
+
+/* ✅ FOOTER */
+footer {
+  text-align:center; padding:20px; background:#ff7b00; color:#fff;
+  margin-top:60px;
+}

@@ -1,0 +1,241 @@
+/* ===================== GLOBAL ===================== */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* ===================== NAVBAR ===================== */
+header.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ff7b00;
+  padding: 12px 20px;
+  flex-wrap: wrap;
+}
+
+header.navbar .logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Nav links */
+header.navbar nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+header.navbar nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+header.navbar nav a:hover,
+header.navbar nav a.active {
+  background: #fff;
+  color: #ff7b00;
+}
+
+/* Auth links */
+.auth-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.auth-links .profile-btn {
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+.auth-links .welcome {
+  color: #fff;
+  font-weight: bold;
+}
+
+.auth-links a {
+  background: #fff;
+  color: #ff7b00;
+  padding: 6px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.auth-links a:hover {
+  background: #ff7b00;
+  color: #fff;
+}
+
+/* ===================== HERO SECTION ===================== */
+.hero {
+  background: url('https://static.vecteezy.com/system/resources/thumbnails/048/509/396/small/blank-white-book-cover-mock-up-on-an-italian-kitchen-table-surrounded-by-fresh-herbs-and-italian-ingredients-photo.jpg')
+              no-repeat center center / cover;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero .overlay {
+  background: rgba(0,0,0,0.6);
+  padding: 30px 25px;
+  border-radius: 15px;
+  color: #fff;
+  max-width: 800px;
+  width: 100%;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+/* ===================== USER ACTION CARDS ===================== */
+.user-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.user-action-card {
+  background: rgba(255,255,255,0.95);
+  padding: 20px;
+  border-radius: 15px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  transition: 0.3s;
+  color: #ff7b00;
+  text-decoration: none;
+}
+
+.user-action-card:hover {
+  transform: translateY(-5px);
+  background: #ff7b00;
+  color: #fff;
+}
+
+.user-action-card h3 {
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.user-action-card p {
+  font-size: 0.95rem;
+}
+
+/* ===================== FOOTER ===================== */
+footer {
+  background: #ff7b00;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  width: 100%;
+}
+
+/* ===================== RESPONSIVE ===================== */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  header.navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header.navbar nav {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .auth-links {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .hero {
+    min-height: 80vh;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .user-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  .user-action-card {
+    width: 90%;
+  }
+}
+.profile-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: white;       /* white circle */
+    color: #ff7b00;                /* icon color */
+    border-radius: 50%;            /* makes it circular */
+    text-decoration: none;
+    font-size: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-right: 8px;             /* optional spacing from username */
+}
+
+.profile-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}

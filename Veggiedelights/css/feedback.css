@@ -1,0 +1,216 @@
+/* ===================== RESET ===================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    font-family: "Poppins", sans-serif;
+    background-color: #fffaf2;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===================== NAVBAR ===================== */
+header.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff7b00;
+    padding: 12px 20px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+header.navbar .logo a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+header.navbar nav {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+header.navbar nav a {
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+header.navbar nav a:hover,
+header.navbar nav a.active {
+    background-color: #fff;
+    color: #ff7b00;
+}
+
+header.navbar .auth-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header.navbar .auth-links .welcome,
+header.navbar .auth-links .profile-icon,
+header.navbar .auth-links a {
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* ===================== LOGOUT BUTTON ===================== */
+.logout-btn {
+    background-color: #fff;
+    color: #ff7b00;
+    border: 2px solid #ff7b00;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: #ff7b00;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* ===================== MAIN CONTENT ===================== */
+main {
+    flex: 1; /* grow to fill space above footer */
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+main h1 {
+    text-align: center;
+    color: #ff7b00;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+main .subtext {
+    text-align: center;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+main form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+main form label {
+    font-weight: 700;
+}
+
+main form input,
+main form select,
+main form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+main form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+main form button {
+    padding: 12px;
+    background-color: #ff7b00;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+main form button:hover {
+    background-color: #e06c00;
+}
+
+/* ===================== FOOTER ===================== */
+footer {
+    background-color: #ff7b00;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    font-weight: 700;
+    width: 100%;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 768px) {
+    header.navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header.navbar nav {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    header.navbar .auth-links {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    main {
+        margin: 20px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header.navbar .logo a {
+        font-size: 1.3rem;
+    }
+
+    main h1 {
+        font-size: 1.4rem;
+    }
+}
+.profile-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: white;       /* white circle */
+    color: #ff7b00;                /* icon color */
+    border-radius: 50%;            /* makes it circular */
+    text-decoration: none;
+    font-size: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-right: 8px;             /* optional spacing from username */
+}
+
+.profile-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}

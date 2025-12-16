@@ -1,0 +1,222 @@
+/* ===================== RESET ===================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* ===================== BODY ===================== */
+body {
+  background-color: #f5f5f5;
+  padding-bottom: 80px; /* Space for footer */
+}
+
+/* ===================== NAVBAR ===================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ff7b00;
+  padding: 12px 30px;
+  flex-wrap: wrap;
+}
+
+.navbar .logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.navbar nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 6px 10px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+  background: #fff;
+  color: #ff7b00;
+}
+
+/* ===================== AUTH LINKS ===================== */
+.auth-links {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.auth-links .welcome {
+  color: #fff;
+  font-weight: bold;
+}
+
+.profile-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background: #fff;
+  color: #ff7b00;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.profile-icon:hover {
+  background: #ff7b00;
+  color: #fff;
+}
+
+.nav-link-logout {
+  background: #fff;
+  color: #ff7b00;
+  padding: 6px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.nav-link-logout:hover {
+  background: #ff7b00;
+  color: #fff;
+}
+
+/* ===================== PAGE HEADING ===================== */
+h1 {
+  text-align: center;
+  color: #ff7b00;
+  margin: 20px 0;
+}
+
+/* ===================== RECIPE CONTAINER ===================== */
+.recipe-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* ===================== RECIPE CARD ===================== */
+.recipe-card {
+  background: #fff;
+  width: 280px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.recipe-card h2 {
+  margin: 10px;
+  color: #ff7b00;
+  font-size: 1.2rem;
+}
+
+.recipe-card p {
+  margin: 0 10px 10px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* ===================== BUTTONS ===================== */
+.recipe-card button {
+  margin: 10px;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.view-btn {
+  background: #007bff;
+  color: #fff;
+}
+
+.view-btn:hover {
+  background: #0056b3;
+}
+
+.delete-btn {
+  background: #dc3545;
+  color: #fff;
+}
+
+.delete-btn:hover {
+  background: #c82333;
+}
+
+/* ===================== FOOTER ===================== */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #ff7b00;
+  text-align: center;
+  color: #fff;
+  padding: 15px 10px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .navbar nav {
+    width: 100%;
+  }
+
+  .auth-links {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar .logo a {
+    font-size: 1.3rem;
+  }
+
+  .recipe-card {
+    width: 100%;
+  }
+}
